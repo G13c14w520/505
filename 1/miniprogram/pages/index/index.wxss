@@ -1,0 +1,165 @@
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #2d3436 0%, #1e272e 50%, #0c0c0c 100%);
+  padding: 40rpx 30rpx;
+  box-sizing: border-box;
+}
+
+.logo-section {
+  text-align: center;
+  margin-bottom: 60rpx;
+}
+
+.logo-emoji {
+  font-size: 120rpx;
+  display: block;
+  margin-bottom: 20rpx;
+}
+
+.logo-title {
+  font-size: 56rpx;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.logo-subtitle {
+  font-size: 28rpx;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 40rpx;
+  margin-bottom: 50rpx;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20rpx;
+  padding: 30rpx 40rpx;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #00cec9;
+  display: block;
+}
+
+.stat-label {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20rpx;
+  display: block;
+}
+
+.difficulty-section {
+  margin-bottom: 50rpx;
+}
+
+.difficulty-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20rpx;
+}
+
+.diff-btn {
+  width: 180rpx;
+  padding: 25rpx 15rpx;
+  border-radius: 20rpx;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.diff-btn.easy {
+  background: linear-gradient(135deg, #00b894 0%, #00cec9 100%);
+}
+
+.diff-btn.medium {
+  background: linear-gradient(135deg, #fdcb6e 0%, #ffeaa7 100%);
+}
+
+.diff-btn.hard {
+  background: linear-gradient(135deg, #ff6b6b 0%, #fd79a8 100%);
+}
+
+.diff-btn:active {
+  transform: scale(0.95);
+}
+
+.diff-emoji {
+  font-size: 40rpx;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.diff-name {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+}
+
+.diff-info {
+  font-size: 20rpx;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.rules-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin-bottom: 50rpx;
+}
+
+.rules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15rpx;
+}
+
+.rule-item {
+  display: flex;
+  align-items: center;
+}
+
+.rule-icon {
+  font-size: 32rpx;
+  margin-right: 15rpx;
+}
+
+.rule-text {
+  font-size: 26rpx;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.start-btn {
+  background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+  border-radius: 30rpx;
+  padding: 30rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  box-shadow: 0 10rpx 30rpx rgba(108, 92, 231, 0.4);
+}
+
+.start-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 5rpx 15rpx rgba(108, 92, 231, 0.4);
+}
+
+.start-text {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #fff;
+}

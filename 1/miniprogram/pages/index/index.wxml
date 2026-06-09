@@ -1,0 +1,65 @@
+<view class="home-container">
+  <view class="logo-section">
+    <text class="logo-emoji">💣</text>
+    <text class="logo-title">扫雷</text>
+    <text class="logo-subtitle">Minesweeper</text>
+  </view>
+
+  <view class="stats-section">
+    <view class="stat-card">
+      <text class="stat-value">{{bestTime}}</text>
+      <text class="stat-label">最快时间</text>
+    </view>
+    <view class="stat-card">
+      <text class="stat-value">{{winCount}}</text>
+      <text class="stat-label">胜利次数</text>
+    </view>
+  </view>
+
+  <view class="difficulty-section">
+    <text class="section-title">选择难度</text>
+    <view class="difficulty-grid">
+      <view class="diff-btn easy" bindtap="selectDifficulty" data-diff="easy">
+        <text class="diff-emoji">😊</text>
+        <text class="diff-name">简单</text>
+        <text class="diff-info">9×9 · 10雷</text>
+      </view>
+      <view class="diff-btn medium" bindtap="selectDifficulty" data-diff="medium">
+        <text class="diff-emoji">😎</text>
+        <text class="diff-name">中等</text>
+        <text class="diff-info">16×16 · 40雷</text>
+      </view>
+      <view class="diff-btn hard" bindtap="selectDifficulty" data-diff="hard">
+        <text class="diff-emoji">🔥</text>
+        <text class="diff-name">困难</text>
+        <text class="diff-info">16×30 · 99雷</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="rules-section">
+    <text class="section-title">游戏规则</text>
+    <view class="rules-list">
+      <view class="rule-item">
+        <text class="rule-icon">👆</text>
+        <text class="rule-text">点击格子揭开</text>
+      </view>
+      <view class="rule-item">
+        <text class="rule-icon">🏴‍☠️</text>
+        <text class="rule-text">数字表示周围地雷数</text>
+      </view>
+      <view class="rule-item">
+        <text class="rule-icon">🤚</text>
+        <text class="rule-text">长按标记可疑地雷</text>
+      </view>
+      <view class="rule-item">
+        <text class="rule-icon">🎉</text>
+        <text class="rule-text">揭开所有安全格获胜</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="start-btn" bindtap="startGame">
+    <text class="start-text">开始游戏 🎮</text>
+  </view>
+</view>
