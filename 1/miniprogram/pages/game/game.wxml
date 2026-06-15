@@ -1,0 +1,54 @@
+<view class="game-container">
+  <view class="game-header">
+    <view class="header-left" bindtap="goHome">
+      <text class="back-icon">←</text>
+    </view>
+    <view class="header-center">
+      <view class="flag-counter">
+        <text class="flag-icon">🚩</text>
+        <text class="flag-count">{{ mineCount - flagCount }}</text>
+      </view>
+    </view>
+    <view class="header-center">
+      <view class="face" bindtap="restart">
+        <text class="face-icon">{{ face }}</text>
+      </view>
+    </view>
+    <view class="header-center">
+      <view class="timer">
+        <text class="timer-icon">⏱️</text>
+        <text class="timer-count">{{ displayTime }}</text>
+      </view>
+    </view>
+    <view class="header-right" bindtap="showAllMinesDebug">
+      <text class="show-mines">🔍</text>
+    </view>
+  </view>
+
+  <scroll-view class="board-container" scroll-x scroll-y>
+    <view class="board" style="grid-template-columns: repeat({{ cols }}, 44rpx);">
+      <view 
+        wx:for="{{ cells }}" 
+        wx:key="id"
+        class="{{ item.class }}"
+        data-id="{{ item.id }}"
+        bindtap="handleTap"
+        bindlongpress="handleLongPress"
+      >
+        <text class="cell-text">{{ item.text }}</text>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="game-over-modal" wx:if="{{ showModal }}">
+    <view class="modal-content">
+      <text class="modal-icon">{{ isWin ? '🎉' : '💥' }}</text>
+      <text class="modal-title">{{ isWin ? '恭喜获胜！' : '游戏结束' }}</text>
+      <text class="modal-time">用时: {{ displayTime }}</text>
+      <view class="modal-buttons">
+        <button class="modal-btn secondary" bindtap="goHome">返回首页</button>
+        <button class="modal-btn primary" bindtap="restart">再来一局</button>
+      </view>
+    </view>
+  </view>
+</view>

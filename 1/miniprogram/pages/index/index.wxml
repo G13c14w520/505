@@ -1,0 +1,63 @@
+<view class="container">
+  <view class="header">
+    <view class="logo">💣</view>
+    <text class="title">扫雷</text>
+    <text class="subtitle">经典益智游戏</text>
+  </view>
+
+  <view class="stats">
+    <view class="stat-item">
+      <text class="stat-value">{{ bestTime }}</text>
+      <text class="stat-label">最佳时间</text>
+    </view>
+    <view class="stat-divider"></view>
+    <view class="stat-item">
+      <text class="stat-value">{{ winCount }}</text>
+      <text class="stat-label">胜利次数</text>
+    </view>
+  </view>
+
+  <view class="difficulty-section">
+    <text class="section-title">选择难度</text>
+    <view class="difficulty-buttons">
+      <view 
+        class="diff-btn {{ selectedDifficulty === 'easy' ? 'active' : '' }}"
+        data-diff="easy"
+        bindtap="selectDifficulty"
+      >
+        <text class="diff-name">简单</text>
+        <text class="diff-desc">9×9 · 10雷</text>
+      </view>
+      <view 
+        class="diff-btn {{ selectedDifficulty === 'medium' ? 'active' : '' }}"
+        data-diff="medium"
+        bindtap="selectDifficulty"
+      >
+        <text class="diff-name">中等</text>
+        <text class="diff-desc">16×16 · 40雷</text>
+      </view>
+      <view 
+        class="diff-btn {{ selectedDifficulty === 'hard' ? 'active' : '' }}"
+        data-diff="hard"
+        bindtap="selectDifficulty"
+      >
+        <text class="diff-name">困难</text>
+        <text class="diff-desc">16×30 · 99雷</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="tips">
+    <text class="tip-title">游戏提示</text>
+    <view class="tip-list">
+      <view class="tip-item">👆 点击揭开格子</view>
+      <view class="tip-item">👆👆 长按标记地雷</view>
+      <view class="tip-item">🔢 数字表示周围地雷数</view>
+    </view>
+  </view>
+
+  <button class="start-btn" bindtap="startGame">
+    <text class="start-text">开始游戏</text>
+    <text class="start-icon">🎮</text>
+  </button>
+</view>
