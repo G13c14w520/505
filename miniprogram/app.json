@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/game/game",
+    "pages/leaderboard/leaderboard",
+    "pages/rules/rules",
+    "pages/online/online"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#2d3436",
+    "navigationBarTitleText": "扫雷",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#2d3436"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

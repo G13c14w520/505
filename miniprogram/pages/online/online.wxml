@@ -1,0 +1,87 @@
+<view class="container">
+  <view class="header">
+    <view class="back-btn" bindtap="goBack">←</view>
+    <text class="title">联机对战</text>
+    <view class="placeholder"></view>
+  </view>
+  <view class="mode-select">
+    <view 
+      class="mode-tab {{ currentMode === 'create' ? 'active' : '' }}"
+      bindtap="switchMode"
+      data-mode="create"
+    >创建房间</view>
+    <view 
+      class="mode-tab {{ currentMode === 'join' ? 'active' : '' }}"
+      bindtap="switchMode"
+      data-mode="join"
+    >加入房间</view>
+  </view>
+  <view class="content">
+    <view wx:if="{{ currentMode === 'create' }}" class="create-form">
+      <view class="form-group">
+        <text class="form-label">你的昵称</text>
+        <input 
+          class="form-input" 
+          placeholder="请输入昵称" 
+          value="{{ playerName }}"
+          bindinput="onNameInput"
+        />
+      </view>
+      <view class="form-group">
+        <text class="form-label">选择难度</text>
+        <view class="difficulty-options">
+          <view 
+            class="diff-option {{ selectedDifficulty === 'easy' ? 'active' : '' }}"
+            bindtap="selectDifficulty"
+            data-diff="easy"
+          >简单</view>
+          <view 
+            class="diff-option {{ selectedDifficulty === 'medium' ? 'active' : '' }}"
+            bindtap="selectDifficulty"
+            data-diff="medium"
+          >中等</view>
+          <view 
+            class="diff-option {{ selectedDifficulty === 'hard' ? 'active' : '' }}"
+            bindtap="selectDifficulty"
+            data-diff="hard"
+          >困难</view>
+        </view>
+      </view>
+      <button class="create-btn" bindtap="createRoom" disabled="{{ !playerName }}">
+        创建房间
+      </button>
+    </view>
+    <view wx:if="{{ currentMode === 'join' }}" class="join-form">
+      <view class="form-group">
+        <text class="form-label">你的昵称</text>
+        <input 
+          class="form-input" 
+          placeholder="请输入昵称" 
+          value="{{ playerName }}"
+          bindinput="onNameInput"
+        />
+      </view>
+      <view class="form-group">
+        <text class="form-label">房间号</text>
+        <input 
+          class="form-input room-input" 
+          placeholder="请输入房间号" 
+          value="{{ roomId }}"
+          bindinput="onRoomInput"
+        />
+      </view>
+      <button class="join-btn" bindtap="joinRoom" disabled="{{ !playerName || !roomId }}">
+        加入房间
+      </button>
+    </view>
+  </view>
+  <view wx:if="{{ waiting }}" class="waiting-modal">
+    <view class="waiting-content">
+      <text class="waiting-icon">⏳</text>
+      <text class="waiting-title">等待对手...</text>
+      <text class="waiting-room">房间号: {{ currentRoomId }}</text>
+      <text class="waiting-tip">请将房间号告诉好友</text>
+      <button class="cancel-btn" bindtap="cancelRoom">取消等待</button>
+    </view>
+  </view>
+</view>

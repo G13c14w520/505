@@ -1,0 +1,90 @@
+<view class="container">
+  <view class="header">
+    <view class="back-btn" bindtap="goBack">←</view>
+    <text class="title">📖 游戏规则</text>
+    <view class="placeholder"></view>
+  </view>
+  <view class="content">
+    <view class="section">
+      <text class="section-title">🎮 基本操作</text>
+      <view class="rule-list">
+        <view class="rule-item">
+          <text class="rule-icon">👆</text>
+          <text class="rule-text">点击格子揭开</text>
+        </view>
+        <view class="rule-item">
+          <text class="rule-icon">👆👆</text>
+          <text class="rule-text">长按标记/取消标记地雷</text>
+        </view>
+      </view>
+    </view>
+    <view class="section">
+      <text class="section-title">📝 游戏规则</text>
+      <view class="rule-list">
+        <view class="rule-item">
+          <text class="rule-number">1</text>
+          <text class="rule-text">点击格子揭开，数字表示周围8格内的地雷数量</text>
+        </view>
+        <view class="rule-item">
+          <text class="rule-number">2</text>
+          <text class="rule-text">长按格子可标记可疑地雷（🚩）</text>
+        </view>
+        <view class="rule-item">
+          <text class="rule-number">3</text>
+          <text class="rule-text">揭开所有非地雷格子即可获胜</text>
+        </view>
+        <view class="rule-item">
+          <text class="rule-number">4</text>
+          <text class="rule-text">点击到地雷则游戏结束</text>
+        </view>
+      </view>
+    </view>
+    <view class="section">
+      <text class="section-title">⚙️ 难度设置</text>
+      <view class="difficulty-list">
+        <view class="difficulty-item">
+          <text class="difficulty-name">简单</text>
+          <text class="difficulty-desc">9×9 格子，10个地雷</text>
+        </view>
+        <view class="difficulty-item">
+          <text class="difficulty-name">中等</text>
+          <text class="difficulty-desc">16×16 格子，40个地雷</text>
+        </view>
+        <view class="difficulty-item">
+          <text class="difficulty-name">困难</text>
+          <text class="difficulty-desc">16×30 格子，99个地雷</text>
+        </view>
+      </view>
+    </view>
+    <view class="section">
+      <text class="section-title">🌐 联机模式</text>
+      <view class="rule-list">
+        <view class="rule-item">
+          <text class="rule-number">1</text>
+          <text class="rule-text">创建房间后等待好友加入</text>
+        </view>
+        <view class="rule-item">
+          <text class="rule-number">2</text>
+          <text class="rule-text">轮流点击，踩雷者输</text>
+        </view>
+        <view class="rule-item">
+          <text class="rule-number">3</text>
+          <text class="rule-text">揭开所有安全格子获胜</text>
+        </view>
+        <view class="rule-item">
+          <text class="rule-number">4</text>
+          <text class="rule-text">胜利次数记录在房间中</text>
+        </view>
+      </view>
+    </view>
+    <view class="section">
+      <text class="section-title">💡 游戏技巧</text>
+      <view class="tip-list">
+        <view class="tip-item">从角落开始，逐步扩展安全区域</view>
+        <view class="tip-item">根据数字推理地雷位置</view>
+        <view class="tip-item">标记确定的地雷，减少误触</view>
+        <view class="tip-item">联机模式中注意观察对手的操作</view>
+      </view>
+    </view>
+  </view>
+</view>
